@@ -1,19 +1,31 @@
 import refractor from "refractor/core";
 import bash from "refractor/lang/bash";
-import css from "refractor/lang/css";
 import clike from "refractor/lang/clike";
 import csharp from "refractor/lang/csharp";
+import css from "refractor/lang/css";
+import docker from "refractor/lang/docker";
 import go from "refractor/lang/go";
+import ini from "refractor/lang/ini";
 import java from "refractor/lang/java";
 import javascript from "refractor/lang/javascript";
 import json from "refractor/lang/json";
+import lisp from "refractor/lang/lisp";
+import lua from "refractor/lang/lua";
+import makefile from "refractor/lang/makefile";
 import markup from "refractor/lang/markup";
+import perl from "refractor/lang/perl";
 import php from "refractor/lang/php";
-import python from "refractor/lang/python";
 import powershell from "refractor/lang/powershell";
+import python from "refractor/lang/python";
 import ruby from "refractor/lang/ruby";
+import rust from "refractor/lang/rust";
+import sass from "refractor/lang/sass";
+import scss from "refractor/lang/scss";
 import sql from "refractor/lang/sql";
+import swift from "refractor/lang/swift";
 import typescript from "refractor/lang/typescript";
+import vim from "refractor/lang/vim";
+import yaml from "refractor/lang/yaml";
 import { setBlockType } from "prosemirror-commands";
 import { textblockTypeInputRule } from "prosemirror-inputrules";
 import copy from "copy-to-clipboard";
@@ -24,20 +36,32 @@ import { ToastType } from "../types";
 
 [
   bash,
-  css,
   clike,
   csharp,
+  css,
+  docker,
   go,
+  ini,
   java,
   javascript,
   json,
+  lisp,
+  lua,
+  makefile,
   markup,
+  perl,
   php,
-  python,
   powershell,
+  python,
   ruby,
+  rust,
+  sass,
+  scss,
   sql,
+  swift,
   typescript,
+  vim,
+  yaml,
 ].forEach(refractor.register);
 
 export default class CodeFence extends Node {
